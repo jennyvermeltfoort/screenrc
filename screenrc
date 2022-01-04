@@ -1,0 +1,25 @@
+autodetach on
+bindkey -k F1 prev
+bindkey -k F2 next
+defscrollback 3000
+hardstatus alwayslastline
+#hardstatus string '[ %H ] [ %t ] [ %n ] [ %h ] [ %w %= ] [ %c:%s ]'
+hardstatus string '[ %H ] [ %w %= ] [ %S ] [ %c:%s ]'
+#shelltitle '$ |bash'
+startup_message off
+termcapinfo xterm 'ds=\E]2;screen was here\007'
+termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+vbell off
+
+
+screen -t VIM 1 bash
+screen -t SHELL 2 bash
+screen -t SHELL 3 bash
+screen -t SHELL 4 bash
+screen -t SHELL 5 bash
+screen -t SHELL 6 bash
+screen -t SHELL 7 bash
+screen -t PYTHON 8 python
+select 0
+bind c screen 1
+bind 0 select 10
